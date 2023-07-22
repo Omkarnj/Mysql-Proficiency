@@ -1,0 +1,17 @@
+--SELECT function returns the specified columns from a table
+-- SELECT * FROM <table name> will return all the columns in a table
+
+SELECT * FROM Employees;
+
+-- WHERE function is used to sort data to find the rows/records meeting a certain criteria
+ 
+SELECT * FROM Employees
+WHERE salary > 120000;
+
+-- This will return all the employee names with salary more than 120000
+-- We can also use AND/OR operators to ask more than one query condition
+
+SELECT * FROM Employees
+WHERE salary > 120000 AND Emp_state = 'Delhi';
+
+--This will return employees that have more than 120000 salary and are from Delhi.
