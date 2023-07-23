@@ -1,0 +1,32 @@
+1. Query a list of CITY names from STATION for cities that have an even ID number. Print the results in any order, but exclude duplicates from the answer.
+
+SELECT DISTINCT(CITY) FROM STATION 
+
+WHERE ID %2=0;
+
+
+Here we learn how to work on math operators, % symbol means to extract the remainder from the number. and the Keyword Distinct means to remove duplicates from our query results.
+
+2. The AS keyword is used to temporarily rename a column when displaying it after a query. 
+For example if we want to add values of two columns - TAX and MRP 
+Then we can write it as - 
+
+SELECT (TAX + MRP) AS TOTAL 
+FROM superstoredata;
+
+It will display the results added into each other
+
+
+3. ORDER BY - The order by clause is used to sort our data in ascending or descending after quering it - 
+SELECT CustomerNames FROM Samplesuperstoredata
+ORDER BY CustomerNames; 
+
+It is important to note here that by default the order by will sort the data in ascending order, that is - alphabetically and numerically.
+But if we specify the key word DESC after the column name in the Syntax, it will order it by descending. you can also add multple columns and order them differently - 
+
+SELECT CustomerNames, Totalsales FROM Samplesuperstoredata
+ORDER BY CustomerNames ASC, TotalSales DESC;
+
+Here, we specified ASC so as to not have both the columns be grouped and sorted as DESC (descending)
+
+
